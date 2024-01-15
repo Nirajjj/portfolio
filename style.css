@@ -207,12 +207,14 @@ span {
 .service-cards {
   width: 300px;
   padding: 20px;
-  border: 2px solid #5E17EB;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   margin-left: 120px;
+  border: 2px solid #5E17EB;
 }
 .service-cards:hover {
+  border: 2px solid #5E17EB;
+
   background-color: #5E17EB;
   /* transform: translateY(-7px); */
 }
@@ -248,4 +250,111 @@ span {
 
 .service-heading h1 {
   margin-right: 70px;
+}
+
+
+/* --------------------------PROJECT----------------------- */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  align-items: center;
+}
+
+.project-first-heading {
+  flex-basis: 25%;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 350px;
+  min-height: 445px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-img {
+  overflow: hidden;
+  min-height: 400px;
+  min-width: 200px;
+}
+
+
+.spotify-clone {
+  width: 830px;
+  background-size: cover;
+  animation: scaleAnimation 15s ease-in-out 2s infinite alternate;
+}
+.project-info {
+  /* z-index: 100; */
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: -260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(transparent, #5E17EB);
+  border-radius: 10px;
+}
+.project-cards:hover .project-info{
+  bottom: 0;
+  /* animation: projectinfo 1s ease-in-out forwards; */
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+/* @keyframes projectinfo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: translateY(-60px);
+  }
+} */
+.project-info-heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  width: 250px;
+  text-align: center;
+}
+
+.project-link {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #5E17EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 2px solid white;
+}
+
+.fa-arrow-up-right-from-square {
+  color: #a4eb17;
+}
+
+.project-link:hover, .project-link:hover .fa-arrow-up-right-from-square{
+  background-color: #a4eb17;
+  color: #5E17EB;
 }
