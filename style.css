@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.heading {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  padding: 20px 10%;
+}
+img {
+  width: 150px;
+
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 5px;
+  display: block;
+  background-color: #5E17EB;
+  left: 0;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.container-content {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.container-text {
+  color: white;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.container-text h1 {
+  font-size: 60px;
+  margin-top: 10px;
+}
+span {
+  color: #5E17EB;
+}
+
+.niraj-parab-photo {
+  width: 290px;
+  height: 290px;
+  border-radius: 190px;
+  border: 15px solid #5E17EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  transform: translateX(20px);
+  transition: all 3s ease-in-out;
+}
+.niraj-parab-photo img {
+  border-radius: 150px;
+  width: 300px;
+}
+/* .contact-me {
+  width: 100px;
+  height: 30px;
+  background-color: #a4eb17;
+  background: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 3px solid #5E17EB;
+} */
+.contact-me {
+  font-weight: bold;
+  color: #a4eb17;
+}
+/* -------------------ABOUT-------------------- */
+
+.about {
+  background-color: black;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  
+}
+.about-column-1 { 
+ flex-basis: 40%;
+ display: flex;
+ justify-content: center;
+ 
+}
+
+.about-column-2 {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 70%;
+  /* flex-wrap: wrap; */
+  font-size: 17px;
+}
+
+.about-me {
+  font-size: 100px;
+}
+
+.about-sections{
+  list-style: none;
+  display: inline-block;
+  color: gray;
+  font-weight: 600;
+  margin-right: 70px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.about-sections::after {
+  content: '';
+  width: 0;
+  height: 5px;
+  display: block;
+  /* border-radius: 1px; */
+  background-color: #5E17EB;
+  transition: 0.5s;
+}
+.about-sections:hover::after {
+  width: 100%;
+}
+.about-sections.active::after {
+  width: 100%;
+}
+.active {
+  color: white;
+}
+.about-content-titles ul {
+  margin-top: 40px;
+}
+
+.about-content ul li {
+ /* list-style: none; */
+ margin: 7px 7px;
+ font-size: 20px;
+ flex: 1 0 25%;
+ font-weight: 600;
+}
+.about-content ul {
+  display: flex;
+  flex-wrap: wrap;  
+  margin-top: 10px;
+
+}
+
+.about-content p{
+  margin-top: 10px;
+  font-size: 20px;
+  color: #a4eb17;
+}
+.about-content {
+  display: none;
+}
+.about-content.active-about-content {
+  display: block;
+}
+
+#small-text {
+  font-size: 15px;
+  color: white;
+}
+.opp-color {
+  color: #a4eb17;
+}
+
+/* --------------------service---------------------- */
+
+.service-cards {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #5E17EB;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  margin-left: 120px;
+}
+.service-cards:hover {
+  background-color: #5E17EB;
+  /* transform: translateY(-7px); */
+}
+.fa-code {
+  font-size: 30px;
+  margin-bottom: 20px;
+
+}
+
+.service-cards p {
+  letter-spacing: 0.5px;
+  margin-top: 7px;
+  line-height: 20px;
+}
+.service-cards button {
+  /* background-color: #a4eb17; */
+  background: transparent;
+  color: #a4eb17;
+  padding: 7px;
+  font-size: 15px;
+  border: none;
+  text-decoration: none;
+  border: 2px solid #a4eb17;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 95px;
+}
+.service-cards button:hover {
+  background-color: #a4eb17;
+  color: black;
+}
+
+.service-heading h1 {
+  margin-right: 70px;
+}
