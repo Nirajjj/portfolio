@@ -24,6 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 nav ul li {
   display: inline-block;
@@ -80,8 +81,8 @@ span {
   justify-content: center;
   align-items: center;
   margin-right: 50px;
-  transform: translateX(20px);
-  transition: all 3s ease-in-out;
+  /* transform: translateX(20px);
+  transition: all 3s ease-in-out; */
 }
 .niraj-parab-photo img {
   border-radius: 150px;
@@ -115,17 +116,19 @@ span {
   align-items: center;
   height: 100vh;
   color: white;
+  flex-wrap: wrap;
   
 }
 .about-column-1 { 
- flex-basis: 40%;
- display: flex;
+ /* flex-basis: 40%; */
+ /* max-width: 90px; */
+ /* display: flex; */ 
  justify-content: center;
  
 }
 
 .about-column-2 {
-  flex-basis: 55%;
+  flex-basis: 40VW;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -143,8 +146,8 @@ span {
   display: inline-block;
   color: gray;
   font-weight: 600;
-  margin-right: 70px;
-  font-size: 20px;
+  margin-right: 4.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 .about-sections::after {
@@ -172,7 +175,7 @@ span {
 .about-content ul li {
  /* list-style: none; */
  margin: 7px 7px;
- font-size: 20px;
+ font-size: 1.1rem;
  flex: 1 0 25%;
  font-weight: 600;
 }
@@ -184,8 +187,8 @@ span {
 }
 
 .about-content p{
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: 0.5em;
+  /* font-size: 1rem; */
   color: #a4eb17;
 }
 .about-content {
@@ -204,14 +207,38 @@ span {
 }
 
 /* --------------------service---------------------- */
-
+.service-container {
+  
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  flex-wrap: wrap;
+  gap: 5%;
+}
 .service-cards {
-  width: 300px;
-  padding: 20px;
+  max-width: 300px;
+  min-height: 1vh;
+  padding: 1em;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
-  margin-left: 120px;
+  /* margin-left: 120px; */
+  
   border: 2px solid #5E17EB;
+
+}
+.service-cards-container {
+  flex-basis: 50vh;
+  /* display: flex;
+  justify-content: end; */
+}
+.service-heading {
+  flex-basis: 40vw;
+  
+  display: flex;
+  justify-content: end;
 }
 .service-cards:hover {
   border: 2px solid #5E17EB;
@@ -220,14 +247,14 @@ span {
   /* transform: translateY(-7px); */
 }
 .fa-code {
-  font-size: 30px;
+  font-size: 2em;
   margin-bottom: 20px;
 
 }
 
 .service-cards p {
   letter-spacing: 0.5px;
-  margin-top: 7px;
+  margin-top: 0.5rem;
   line-height: 20px;
 }
 .service-cards button {
@@ -249,9 +276,9 @@ span {
   color: black;
 }
 
-.service-heading h1 {
+/* .service-heading h1 {
   margin-right: 70px;
-}
+} */
 
 
 /* --------------------------PROJECT----------------------- */
@@ -374,24 +401,25 @@ span {
   height: 100vh;
   color: white;
   background-color: black;
-  gap: 10%;
+  flex-wrap: wrap;
+  gap: 5%;
 }
 .contact-me-links {
   display: flex;
   flex-direction: column;
   align-items: start;
-  height: 80%;
-  /* flex-basis: 40%; */
+  /* height: 80%;
+  flex-basis: 45%; */
 }
 
 .contact-me-links h1 {
-  margin-bottom: 40px;
+  margin-bottom: 2vw;
 }
 .contact-me-links p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 .contact-me-links p i {
   font-size: 20px;
@@ -410,12 +438,12 @@ span {
 }
 .download-resume {
   background-color: #5E17EB;
-  padding: 12px 12px;
+  padding: 1.5vh 1.5vh;
   text-decoration: none;
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 3vh;
 }
 .contact-me-form {
   height: 70%;
@@ -473,8 +501,153 @@ input::placeholder, textarea::placeholder {
 
 /* ---------------css for small screen--------------- */
 
-
+.fa-bars .fa-xmark {
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
+  
+   /* ------------------HOME------------------- */
+  .niraj-parab-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid #5E17EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    /* transform: translateX(20px);
+    transition: all 3s ease-in-out; */
+  }
+  .niraj-parab-photo img {
+    border-radius: 50px;
+    width: 100px;
+  }
+  nav ul li {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #a4eb17;
+    right: -200px;
+    width: 200px;
+    padding-top: 40px;
+  }
+  .contact-me {
+    color: #5E17EB;
+  }
+  .fa-bars, .fa-xmark {
+    display: block;
+    filter: invert(1);
+    font-size: 25px;
+  }
+  .fa-xmark {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .fa-bars {
+    position: fixed;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    display: none;
+  }
+
+  /* ---------ABOUT----------- */
+  .about-me {
+    font-size: 25px;
+    /* width: 20px;
+    height: 20px; */
+    margin-bottom: 0.5em;
+  }
+  h1 br {
+    display: none;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .about-content ul li {
+    /* list-style: none; */
+    /* margin: 0; */
+    font-size: 1rem;
+    flex: 1 0 25%;
+    font-weight: 600;
+   }
+   .about-sections {
+    margin-right: 1rem;
+   }
+
+   .about-content {
+    width: 80vw;
+  }
+  .about-column-2 {
+    width: 90vw;
+  }
+  #experience ul li{
+    background-color: #a4eb17;
+    z-index: 5;
+  }
+  /* ---------------service--------------- */
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    color: white;
+  }
+  .service-cards-container {
+    flex-basis: 60vh;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+  }
+  .service-heading {
+    flex-basis: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .service-cards p {
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+  }
+  /* ------------------PROJECTS------------------ */
+  .project-first-heading {
+    flex-basis: 15%;
+  }
+  /* ------------------CONTACT ME------------------ */
+  .contact-me-container {
+    flex-direction: column;
+    justify-content: start;
+    gap: 0;
+
+  }
+  .contact-me-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* flex-basis: 40%; */
+  }
+  .contact-me-form {
+    height: 10%;
+    width: 70vw;
+    align-items: start;
+  }
+  .contact-me-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
 }
