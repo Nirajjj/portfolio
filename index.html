@@ -11,16 +11,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="heading">
+  <div class="heading" id="header">
     <div class="container">
       <nav>
         <img src="assets/niraj text logo.png" alt="logo">
-        <ul>
-          <li><a href="#">Home</a></li> 
-          <li><a href="#">About</a></li> 
-          <li><a href="#">services</a></li> 
-          <li><a href="#">Projects</a></li> 
-          <li><a href="#" class="contact-me">Contact me</a></li> 
+        <ul id="menu">
+          <li><a href="#header">Home</a></li> 
+          <li><a href="#about">About</a></li> 
+          <li><a href="#service">service</a></li> 
+          <li><a href="#project">Project</a></li> 
+          <li><a href="#contact-me" class="contact-me">Contact me</a></li> 
           <i class="fa-solid fa-xmark"></i>
         </ul>
         <i class="fa-solid fa-bars"></i>
@@ -37,7 +37,7 @@
     </div>
   </div>
   <!-- ------------------ABOUT-------------------- -->
-  <div class="about">
+  <div class="about" id="about">
     <div class="about-container">
       <div class="about-column-1">
         <h1 class="about-me">About <br> me<span>_</span></h1>
@@ -103,7 +103,7 @@
 
   <!-- --------------------service----------------------- -->
   
-  <div class="about">
+  <div class="about" id="service">
     <div class="service-container">
       <div class="service-heading">
         <h1 class="about-me">service<span>_</span></h1>
@@ -113,7 +113,7 @@
           <i class="fa-solid fa-code"></i>
           <h4>Web Development</h4>
           <p> I specialize in transforming design concepts into captivating and functional websites. With a keen eye for detail, I bring creativity and technical proficiency to every project, delivering tailored solutions that enhance online presence. Elevate your digital footprint with my personalized and responsive web development services.</p>
-          <button>contact-me</button>
+          <button><a href="#contact-me">contact-me</a></button>
         </div>
       </div>
     </div>
@@ -121,10 +121,10 @@
   </div>
 
   <!-- -----------------------PROJECTS--------------------- -->
-  <div class="about">
+  <div class="about" id="project">
     <div class="project-container">
       <div class="project-first-heading">
-        <h1 class="about-me">Projects<span>_</span></h1>
+        <h1 class="about-me">Project<span>_</span></h1>
       </div>
       <div class="project-cards">
         <div class="project-img">
@@ -148,7 +148,7 @@
 
 
   <!-- -----------------------CONTACT ME----------------------- -->
-  <div class="contact-me-container">
+  <div class="contact-me-container" id="contact-me">
     <div class="contact-me-links">
       <h1 class="about-me contact-me-head">Contact <br> Me<span>_</span></h1>
       <p><i class="fa-solid fa-envelope"></i>nirajparab007@gmail.com</p>
@@ -162,11 +162,12 @@
       <a href="assets/NIRAJ PARAB RESUME.pdf" download class="download-resume btn">Download Resume</a>
     </div>
     <div class="contact-me-form">
-      <form action="#">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea name="message" id="input-message" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <form action="#" name="submit-to-google-sheet">
+        <input type="text" placeholder="Your Name" name="name" required>
+        <input type="email" placeholder="Your Email" name="email" required>
+        <textarea name="message" id="input-message" cols="30" rows="10" placeholder="Your Message" required></textarea>
         <button type="submit">Submit</button>
+        <span id="msg"></span>
       </form>
     </div>
   </div>
